@@ -1,0 +1,10 @@
+package com.backend.backend.Repositeries;
+
+import com.backend.backend.models.Product;
+import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface ProductRepository extends MongoRepository<Product, String> {
+    Product findBy_id(ObjectId _id);
+
+}
